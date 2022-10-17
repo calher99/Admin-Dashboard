@@ -1,4 +1,4 @@
-
+¡
 @font-face {
     font-family: 'Roboto-Slab';
     src: url('./fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype'),
@@ -45,6 +45,7 @@ body{
     display: grid;
     grid-template-columns: auto 1fr auto auto auto;
     gap: 15px;
+    align-items: center;
 }
 .sidebarContent{
     display: flex;
@@ -96,4 +97,26 @@ input[type="search"] {
 .userControl img{
     border-radius: 40px;
     width: 3.5rem;
+}
+p {
+    
+    font-size: 0.75rem;
+}
+/*Classic changes for the form elements*/
+button,
+input
+ {
+  display: block;
+  font-family: inherit;
+  font-size: 80%;
+  margin: 0;
+  box-sizing: border-box;
+}
+button{
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--dark);
+    background-color: var(--dark);
+    color: var(--light);
 }
