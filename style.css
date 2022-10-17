@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Roboto-Slab';
     src: url('./fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype'),
@@ -10,29 +11,37 @@
     --medium: #34d399;
     --dark: #047857;
     --superDark: #064e3b;
+    --paddingGeneral:15px;
+    --fontSize:1.3rem;
 }
 body{
     font-family: 'Roboto-Slab', sans-serif;
+    font-size: var(--fontSize);
 }
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
 }
 
 .sidebar{
     grid-column: 1/2;
+    padding: var(--paddingGeneral);
 } 
 
 .search{
     display: grid;
-    grid-template-columns: 1fr auto auto auto;
+    grid-template-columns: auto 1fr auto auto auto;
     gap: 15px;
     grid-column: 2/3;
-    
+    padding: var(--paddingGeneral);
+    margin-left: var(--paddingGeneral);
+    align-items: center;
 }
 
 .userControl{
+    padding: var(--paddingGeneral);
+    margin-left: var(--paddingGeneral);
     display: grid;
     grid-template-columns: auto 1fr auto auto auto;
     gap: 15px;
@@ -68,14 +77,23 @@ input[type="search"]::-webkit-search-results-decoration {
 
 input[type="search"] {
     appearance: none;
-    width: 60%;
+    width: 80%;
     height: 1.5rem;
     border-radius: 10px;
     border: 1.5px solid black;
-    justify-self: center;
+    justify-self: start;
     background-color: var(--light);
 }
   input[type="search"]:focus{
     outline: none; /*Remove default blue outline*/
     border: 2px solid var(--superDark);
+}
+.search img{
+    border-radius: 15px;
+    width: 2rem;
+}
+
+.userControl img{
+    border-radius: 40px;
+    width: 3.5rem;
 }
