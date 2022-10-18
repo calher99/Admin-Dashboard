@@ -11,7 +11,8 @@
     --medium: #34d399;
     --dark: #047857;
     --superDark: #064e3b;
-    --paddingGeneral:15px;
+    --paddingGeneral:20px;
+    --paddingExtra:35px;
     --fontSize:1rem;
     
 }
@@ -40,15 +41,19 @@ body{
     grid-template-columns: auto 1fr auto auto auto;
     gap: 15px;
     grid-column: 2/3;
-    padding: var(--paddingGeneral);
-    margin-left: var(--paddingGeneral);
+    padding-top: var(--paddingGeneral);
+    padding-bottom: var(--paddingGeneral);
+    padding-left: var(--paddingExtra);
+    padding-right: var(--paddingExtra);
     background-color: var(--superLight);
     align-items: center;
 }
 
 .userControl{
-    padding: var(--paddingGeneral);
-    margin-left: var(--paddingGeneral);
+    padding-top: var(--paddingGeneral);
+    padding-bottom: var(--paddingGeneral);
+    padding-left: var(--paddingExtra);
+    padding-right: var(--paddingExtra);
     background-color: var(--superLight);
     display: grid;
     grid-template-columns: auto 1fr auto auto auto;
@@ -106,10 +111,7 @@ input[type="search"] {
     border-radius: 40px;
     width: 3.5rem;
 }
-p {
-    
-    font-size: 0.75rem;
-}
+
 /*Classic changes for the form elements*/
 button,
 input
@@ -133,16 +135,17 @@ button{
 .content{
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto 1fr auto 1fr;
+    grid-template-rows: auto auto auto auto;
     grid-auto-flow: auto;
     background-color: var(--light);
+    padding-bottom: calc(2*var(--paddingGeneral));
 }
 .projects{
     grid-column: 1/2;
     grid-row: 2/5;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    grid-auto-rows: 200px;
+    grid-auto-rows: auto;
     gap: 20px;
     padding: var(--paddingGeneral);
     
@@ -167,8 +170,57 @@ h2{
     justify-self: right;
 } 
 
-
-
 .announcements + p{
     grid-row:3/4 ;
+    
+}
+
+.title{
+    font-weight: bold;
+    margin-bottom: -5px;
+}
+
+.announcements>div{
+    background-color: var(--superLight);
+    margin: var(--paddingGeneral);
+    padding: var(--paddingGeneral);
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 1px var(--medium);
+   
+}
+
+[class*="_header"]{
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-self: end;
+    padding-left: var(--paddingGeneral);
+    margin-bottom: -7px;
+}
+
+.trending img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+
+.profile{
+    display:flex;
+    gap: 8px;
+
+}
+.trending{
+    background-color: var(--superLight);
+    margin: var(--paddingGeneral);
+    padding: var(--paddingGeneral);
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 1px var(--medium);
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: start;
+}
+.profile_info{
+    display:flex;
+    flex-direction: column;
+    
 }
